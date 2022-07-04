@@ -1,0 +1,103 @@
+/* Full Header */
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  background-color: #00c8ff;
+}
+
+/* Generic Header Wrapper Container */
+.header-wrapper {
+  padding: 14px 40px 14px 110px;
+}
+
+/* Header Top Styles */
+.header-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-top__logo {
+  margin-top: 4px;
+}
+
+.header-top__search {
+  margin: 12px 0 4px;
+  position: relative;
+}
+
+.search__input {
+  width: 264px;
+  height: 32px;
+  background: #ffffff;
+  border: 2px solid #f0f0f0;
+  border-radius: 5px;
+}
+
+.search__input::placeholder {
+  font-size: 14px;
+  color: #c4c4c4;
+  text-indent: 12px;
+}
+
+.search__magnifier {
+  position: absolute;
+  right: 7px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.header-top__user {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  gap: 40px;
+  align-items: center;
+  height: fit-content;
+  padding-top: 14px;
+}
+
+.user__login {
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  font-size: 14px;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+}
+
+.user__shoppingCart {
+  cursor: pointer;
+}
+
+/* Divisor */
+
+.divisor {
+  height: 1px;
+  background-color: #c4c4c4;
+}
+
+/* Header Bottom Styles */
+.header-ul {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  gap: 126px;
+}
+
+.header-ul__li {
+  height: fit-content;
+}
+
+.li__text {
+  max-height: fit-content;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+}
