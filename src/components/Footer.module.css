@@ -1,0 +1,120 @@
+/* Footer Container */
+.footer-infos {
+  background: #585858;
+  padding: 17px 32px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Footer Text Info */
+.infos-text-desktop {
+  font-size: 10px;
+  line-height: 12px;
+  color: #ffffff;
+  text-transform: capitalize;
+}
+
+.infos-text-mobile {
+  font-size: 10px;
+  line-height: 12px;
+  color: #ffffff;
+  text-transform: capitalize;
+  padding: 12px 0 24px 0;
+}
+
+/* Footer Payment Icons */
+.infos-labels {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: fit-content;
+}
+
+.labels-security,
+.labels-payments {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  align-items: center;
+  margin: 0;
+}
+
+.labels-payments {
+  gap: 13px;
+}
+
+.labels-divider {
+  width: 1px;
+  height: 24px;
+  margin: 0 10px 0 13px;
+  background: #c4c4c4;
+}
+
+/* Footer Development/Company Information Icons */
+
+.infos-company {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  align-items: center;
+}
+
+.infos-company p {
+  font-size: 10px;
+  line-height: 12px;
+  color: #ffffff;
+  margin-right: 8px;
+}
+
+.company-vtex {
+  margin-right: 16px;
+}
+
+/* Media Queries */
+@media screen and (min-width: 769px) {
+  .infos-text-mobile {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .footer-infos {
+    padding: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .infos-text-desktop {
+    display: none;
+  }
+
+  .labels-payments {
+    gap: 11px;
+  }
+
+  .labels-payments li img {
+    width: 30px;
+    height: 17px;
+  }
+
+  .labels-security li img {
+    width: 45px;
+    height: 28px;
+  }
+
+  .labels-divider {
+    margin: 0 12px 0 9px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .infos-labels {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .labels-divider {
+    display: none;
+  }
+}
