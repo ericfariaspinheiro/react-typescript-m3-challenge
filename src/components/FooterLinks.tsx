@@ -5,6 +5,7 @@ import Instagram from "../arquivos/img/FooterLinks/instagram-icon.png";
 import Twitter from "../arquivos/img/FooterLinks/twitter-icon.png";
 import Youtube from "../arquivos/img/FooterLinks/youtube-icon.png";
 import Linkedin from "../arquivos/img/FooterLinks/linkedin-icon.png";
+import Plus from "../arquivos/img/FooterLinks/plus-icon.png";
 
 import styles from "./FooterLinks.module.css";
 
@@ -39,6 +40,9 @@ const FooterLinks = () => {
               </a>
             </li>
           </ul>
+          <button>
+            <img src={Plus} alt="PLus Icon" />
+          </button>
         </div>
 
         <div className={styles["text-block"]}>
@@ -68,6 +72,9 @@ const FooterLinks = () => {
               </a>
             </li>
           </ul>
+          <button>
+            <img src={Plus} alt="PLus Icon" />
+          </button>
         </div>
 
         <div className={styles["text-block"]}>
@@ -93,6 +100,9 @@ const FooterLinks = () => {
               </a>
             </li>
           </ul>
+          <button>
+            <img src={Plus} alt="PLus Icon" />
+          </button>
         </div>
       </div>
 
