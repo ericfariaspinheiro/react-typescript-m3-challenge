@@ -1,16 +1,20 @@
 import React from "react";
 
-import { Header } from "../components/Header";
-import { PageForm } from "../components/PageForm";
-import { FooterLinks } from "../components/FooterLinks";
-import { Footer } from "../components/Footer";
+import { Header } from "../components/Header/Header";
+import { MainSection } from "../components/Main/MainSection";
+import { Newsletter } from "../components/Footer/Newsletter";
+import { FooterLinks } from "../components/Footer/FooterLinks";
+import { Footer } from "../components/Footer/Footer";
 
 const Home = () => {
   return (
     <>
       <Header />
-      <main>{/* <PageForm /> */}</main>
+      <main>
+        <MainSection />
+      </main>
       <footer>
+        <Newsletter />
         <FooterLinks />
         <Footer />
       </footer>

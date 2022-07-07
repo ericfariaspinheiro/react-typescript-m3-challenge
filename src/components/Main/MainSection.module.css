@@ -1,0 +1,119 @@
+/* Full Main Section Styles */
+.main-informations {
+  width: 100%;
+  max-width: calc(100% - 68px);
+  padding: 29px 0px 170px 128px;
+}
+
+/* Path Information Icons Styles */
+
+.informations-icons {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 80px;
+}
+
+.icons-title {
+  font-size: 12px;
+  line-height: 14px;
+  color: #c4c4c4;
+}
+
+/* Section Title Styles */
+
+.informations-title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.informations-title h2 {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.1em;
+  color: #292929;
+}
+
+/* Section Wrapper Styles */
+
+.informations-content {
+  max-width: 1018px;
+  margin: auto;
+  display: flex;
+  gap: 32px;
+}
+
+/* Side Menu Styles */
+.content-menu {
+  height: fit-content;
+  width: 100%;
+  max-width: 270px;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #e5e5e5;
+}
+
+.list-item button {
+  /* Normalizer */
+  border: 0;
+  outline: 0;
+  background: transparent;
+
+  width: 100%;
+  padding: 10px 16px;
+  height: 40px;
+  cursor: pointer;
+
+  /* Button Text */
+  text-align: left;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #7d7d7d;
+}
+
+.content-article {
+  width: 100%;
+  max-width: 715px;
+}
+
+/* Media Query */
+@media screen and (max-width: 768px) {
+  .main-informations {
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  .informations-icons {
+    margin-bottom: 32px;
+  }
+
+  .informations-title {
+    margin-bottom: 23px;
+  }
+
+  .informations-content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .content-menu {
+    max-width: 100%;
+    border-right: none;
+  }
+
+  .article-title {
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  .article-text:last-child,
+  .article-break {
+    display: none;
+  }
+}

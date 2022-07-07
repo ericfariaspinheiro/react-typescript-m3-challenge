@@ -102,10 +102,6 @@
     width: 45px;
     height: 28px;
   }
-
-  .labels-divider {
-    margin-bottom: 12px;
-  }
 }
 
 @media screen and (max-width: 360px) {

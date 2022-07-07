@@ -1,15 +1,15 @@
 import React from "react";
 
-import Mastercard from "../arquivos/img/Footer/master-icon.png";
-import Visa from "../arquivos/img/Footer/visa-icon.png";
-import Diners from "../arquivos/img/Footer/diners-icon.png";
-import Elo from "../arquivos/img/Footer/elo-icon.png";
-import Hipercard from "../arquivos/img/Footer/hiper-icon.png";
-import Paypal from "../arquivos/img/Footer/pagseguro-icon.png";
-import Boleto from "../arquivos/img/Footer/boleto-icon.png";
-import VtexPci from "../arquivos/img/Footer/vtex-pci-icon.png";
-import M3Logo from "../arquivos/img/Footer/m3-white-icon.png";
-import VtexLogo from "../arquivos/img/Footer/vtex-white-icon.png";
+import Mastercard from "../../arquivos/img/Footer/master-icon.png";
+import Visa from "../../arquivos/img/Footer/visa-icon.png";
+import Diners from "../../arquivos/img/Footer/diners-icon.png";
+import Elo from "../../arquivos/img/Footer/elo-icon.png";
+import Hipercard from "../../arquivos/img/Footer/hiper-icon.png";
+import Paypal from "../../arquivos/img/Footer/pagseguro-icon.png";
+import Boleto from "../../arquivos/img/Footer/boleto-icon.png";
+import VtexPci from "../../arquivos/img/Footer/vtex-pci-icon.png";
+import M3Logo from "../../arquivos/img/Footer/m3-white-icon.png";
+import VtexLogo from "../../arquivos/img/Footer/vtex-white-icon.png";
 
 import styles from "./Footer.module.css";
 

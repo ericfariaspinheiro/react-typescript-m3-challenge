@@ -1,9 +1,9 @@
 import React from "react";
 
-import LogoM3 from "../arquivos/img/Header/m3-academy-logo.png";
-import Cart from "../arquivos/img/Header/cart-icon.png";
-import Magnifier from "../arquivos/img/Header/magnifier-icon.png";
-import MobileMenu from "../arquivos/img/Header/mobile-menu-icon.png";
+import LogoM3 from "../../arquivos/img/Header/m3-academy-logo.png";
+import Cart from "../../arquivos/img/Header/cart-icon.png";
+import Magnifier from "../../arquivos/img/Header/magnifier-icon.png";
+import MobileMenu from "../../arquivos/img/Header/mobile-menu-icon.png";
 
 import styles from "./Header.module.css";
 

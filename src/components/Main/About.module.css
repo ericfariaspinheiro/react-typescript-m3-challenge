@@ -1,0 +1,13 @@
+.article-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: #292929;
+  margin-bottom: 12px;
+}
+
+.article-text {
+  font-size: 13px;
+  line-height: 15px;
+  color: #7d7d7d;
+}

@@ -1,11 +1,11 @@
 import React from "react";
 
-import Facebook from "../arquivos/img/FooterLinks/facebook-icon.png";
-import Instagram from "../arquivos/img/FooterLinks/instagram-icon.png";
-import Twitter from "../arquivos/img/FooterLinks/twitter-icon.png";
-import Youtube from "../arquivos/img/FooterLinks/youtube-icon.png";
-import Linkedin from "../arquivos/img/FooterLinks/linkedin-icon.png";
-import Plus from "../arquivos/img/FooterLinks/plus-icon.png";
+import Facebook from "../../arquivos/img/FooterLinks/facebook-icon.png";
+import Instagram from "../../arquivos/img/FooterLinks/instagram-icon.png";
+import Twitter from "../../arquivos/img/FooterLinks/twitter-icon.png";
+import Youtube from "../../arquivos/img/FooterLinks/youtube-icon.png";
+import Linkedin from "../../arquivos/img/FooterLinks/linkedin-icon.png";
+import Plus from "../../arquivos/img/FooterLinks/plus-icon.png";
 
 import styles from "./FooterLinks.module.css";
 

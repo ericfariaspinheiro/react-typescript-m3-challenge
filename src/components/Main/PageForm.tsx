@@ -3,24 +3,26 @@ import React from "react";
 import styles from "./PageForm.module.css";
 
 import { Formik, Form, Field, ErrorMessage, FormikHelpers } from "formik";
-import FormSchema from "../schema/FormSchema";
+import FormSchema from "../../schema/FormSchema";
 
 interface IFormikValues {
   nome: string;
   email: string;
-  cpf: number;
-  birthDate: Date;
-  phone: number;
+  cpf: string;
+  birthDate: string;
+  phone: string;
   instagram: string;
+  usePolicy: boolean;
 }
 
 const initialValues = {
   nome: "",
   email: "",
-  cpf: 0,
-  birthDate: new Date(),
-  phone: 0,
+  cpf: "",
+  birthDate: "",
+  phone: "",
   instagram: "",
+  usePolicy: false,
 };
 
 const PageForm = () => {
@@ -30,13 +32,13 @@ const PageForm = () => {
 
   return (
     <div className={styles["form-wrapper"]}>
+      <h3 className={styles["form-title"]}>PREENCHA O FORMULARIO</h3>
       <Formik
         onSubmit={handleFormikSubmit}
         initialValues={initialValues}
         validationSchema={FormSchema}
       >
         <Form>
-          <h2>PREENCHA O FORMULARIO</h2>
           <div className={styles["form-col"]}>
             <label htmlFor="name">Nome</label>
             <Field id="name" name="name" placeholder="Seu nome completo" />
@@ -52,11 +54,11 @@ const PageForm = () => {
             <Field id="cpf" name="cpf" placeholder="000 000 000 00" />
           </div>
           <div className={styles["form-col"]}>
-            <label htmlFor="birthDate">Data de Nascimento</label>
+            <label htmlFor="birthDate">Data de Nascimento:</label>
             <Field id="birthDate" name="birthDate" placeholder="00 .00 . 00" />
           </div>
           <div className={styles["form-col"]}>
-            <label htmlFor="phone">Telefone</label>
+            <label htmlFor="phone">Telefone:</label>
             <Field id="phone" name="phone" placeholder="00 .00 . 00" />
           </div>
           <div className={styles["form-col"]}>
@@ -64,7 +66,12 @@ const PageForm = () => {
             <Field id="instagram" name="instagram" placeholder="@seuuser" />
             <ErrorMessage name="instagram" component="span" className={styles["error-message"]} />
           </div>
-
+          <div className={styles["form-toggle"]}>
+            <label htmlFor="toggle">
+              <span>*</span>Declaro que li e aceito
+            </label>
+            <Field type="checkbox" name="toggle" />
+          </div>
           <button type="submit">CADASTRE-SE</button>
         </Form>
       </Formik>
