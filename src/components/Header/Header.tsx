@@ -1,19 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 
-import LogoM3 from "../../arquivos/img/Header/m3-academy-logo.png";
-import Cart from "../../arquivos/img/Header/cart-icon.png";
-import Magnifier from "../../arquivos/img/Header/magnifier-icon.png";
-import MobileMenu from "../../arquivos/img/Header/mobile-menu-icon.png";
+import { MobileMenu } from "./MobileMenu";
+import { SearchBar } from "./SearchBar";
 
 import styles from "./Header.module.css";
 
+import LogoM3 from "../../arquivos/img/Header/m3-academy-logo.png";
+import Cart from "../../arquivos/img/Header/cart-icon.png";
+
+import MobileIcon from "../../arquivos/img/Header/mobile-menu-icon.png";
+
 const Header = () => {
+  const [mobileMenuStatus, setMobileMenuStatus] = useState(false);
+
   return (
     <header className={styles["header"]}>
+      <MobileMenu mobileMenuStatus={mobileMenuStatus} setMobileMenuStatus={setMobileMenuStatus} />
       <div className={styles["header-top"]}>
         <div className={styles["header-top__mobile"]}>
-          <button>
-            <img src={MobileMenu} alt="" />
+          <button onClick={() => setMobileMenuStatus(true)}>
+            <img src={MobileIcon} alt="Mobile Icon" />
           </button>
         </div>
 
@@ -23,7 +29,9 @@ const Header = () => {
           </a>
         </div>
 
-        <SearchBar />
+        <div className={styles["top-search-desktop"]}>
+          <SearchBar />
+        </div>
 
         <div className={styles["header-top__user"]}>
           <button className={styles["user__login"]}>ENTRAR</button>
@@ -36,7 +44,9 @@ const Header = () => {
       <div className={styles["divisor"]}></div>
 
       <div className={styles["header-bottom"]}>
-        <SearchBar />
+        <div className={styles["top-search-mobile"]}>
+          <SearchBar />
+        </div>
         <ul className={styles["header-ul"]}>
           <li className={styles["header-ul__li"]}>
             <a href="./" className={styles["li__text"]}>
@@ -51,17 +61,6 @@ const Header = () => {
         </ul>
       </div>
     </header>
-  );
-};
-
-const SearchBar = () => {
-  return (
-    <div className={styles["search"]}>
-      <input type="text" className={styles["search__input"]} placeholder="Buscar..." />
-      <i className={styles["search__magnifier"]}>
-        <img src={Magnifier} alt="" />
-      </i>
-    </div>
   );
 };
 
