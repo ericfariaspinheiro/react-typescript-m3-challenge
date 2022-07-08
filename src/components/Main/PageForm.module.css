@@ -92,10 +92,14 @@
   text-decoration-color: #03bffe;
 }
 
+/* Error Message */
 .error-message {
-  color: red;
   position: absolute;
   bottom: -16px;
+  color: red;
+  margin-left: 15px;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 /* Media Queries */
