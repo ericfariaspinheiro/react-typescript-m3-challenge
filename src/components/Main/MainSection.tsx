@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 import { About } from "./About";
 import { PageForm } from "./PageForm";
@@ -21,15 +21,35 @@ interface Iobj {
 
 const obj: Iobj = {
   sobre: <About />,
-  pagamento: <div></div>,
-  entrega: <div></div>,
-  trocaDevolucao: <div></div>,
-  seguroPrivacidade: <div></div>,
+  pagamento: <section></section>,
+  entrega: <section></section>,
+  trocaDevolucao: <section></section>,
+  seguroPrivacidade: <section></section>,
   contato: <PageForm />,
 };
 
 const MainSection = () => {
   const [page, setPage] = useState("sobre");
+  const [bodyOffset, setBodyOffset] = useState(document.body.getBoundingClientRect().top);
+
+  const ref = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    document.addEventListener("scroll", () =>
+      setBodyOffset(document.body.getBoundingClientRect().top)
+    );
+
+    if (bodyOffset < -100) {
+      ref.current!.style.display = "flex";
+    } else {
+      ref.current!.style.display = "none";
+    }
+  }, [bodyOffset]);
+
+  const topFunction = () => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  };
 
   return (
     <div className={styles["main-informations"]}>
@@ -111,8 +131,8 @@ const MainSection = () => {
 
         <section className={styles["content-article"]}>{obj[page as keyof typeof obj]}</section>
 
-        <div className={styles["informations-nav"]}>
-          <button>
+        <div className={styles["informations-nav"]} ref={ref}>
+          <button onClick={topFunction}>
             <img src={ScrollUp} alt="Scrow To The Top Icon" />
           </button>
           <button>
