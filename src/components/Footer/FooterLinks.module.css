@@ -1,7 +1,9 @@
 .footer-links {
   display: flex;
   justify-content: space-between;
-  margin: 25px 128px 50px 229px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 25px 50px 50px;
 }
 
 /* Text Links Styles */

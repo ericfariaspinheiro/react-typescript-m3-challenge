@@ -132,11 +132,11 @@ const MainSection = () => {
         <section className={styles["content-article"]}>{obj[page as keyof typeof obj]}</section>
 
         <div className={styles["informations-nav"]} ref={ref}>
-          <button onClick={topFunction}>
-            <img src={ScrollUp} alt="Scrow To The Top Icon" />
-          </button>
           <button>
             <img src={Whatsapp} alt="Whatsapp Icon" />
+          </button>
+          <button onClick={topFunction}>
+            <img src={ScrollUp} alt="Scrow To The Top Icon" />
           </button>
         </div>
       </div>

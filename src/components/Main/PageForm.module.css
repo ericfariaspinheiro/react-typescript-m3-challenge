@@ -2,7 +2,7 @@
 .form-wrapper {
   width: 100%;
   max-width: 392px;
-  margin-left: 80px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 33px;
@@ -92,6 +92,11 @@
   text-decoration-color: #03bffe;
 }
 
+.form-toggle .error-message {
+  bottom: -255px;
+  margin-left: -10px;
+}
+
 /* Error Message */
 .error-message {
   position: absolute;
@@ -106,7 +111,7 @@
 
 @media screen and (max-width: 768px) {
   .form-wrapper {
-    margin: 0;
+    margin: 0 auto;
   }
 
   .form-title {
