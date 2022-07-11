@@ -2,8 +2,8 @@ import React from "react";
 
 import styles from "./PageForm.module.css";
 
-import { Formik, Form, Field, ErrorMessage } from "formik";
-import FormSchema from "../../schema/FormSchema";
+import { Formik, Form, Field, ErrorMessage, FormikHelpers } from "formik";
+import { pageFrom } from "../../schema/FormSchema";
 
 interface IFormikValues {
   name: string;
@@ -26,8 +26,13 @@ const initialValues: IFormikValues = {
 };
 
 const PageForm = () => {
-  const handleFormikSubmit = (values: IFormikValues) => {
+  const handleFormikSubmit = (
+    values: IFormikValues,
+    formikHelpers: FormikHelpers<IFormikValues>
+  ) => {
     console.log(values);
+    alert("Formulário submetido com sucesso!");
+    formikHelpers.resetForm();
   };
 
   return (
@@ -35,7 +40,7 @@ const PageForm = () => {
       <h3 className={styles["form-title"]}>PREENCHA O FORMULARIO</h3>
       <Formik
         initialValues={initialValues}
-        validationSchema={FormSchema}
+        validationSchema={pageFrom}
         onSubmit={handleFormikSubmit}
       >
         <Form>
@@ -59,12 +64,12 @@ const PageForm = () => {
 
           <div className={styles["form-col"]}>
             <label htmlFor="birthDate">Data de Nascimento:</label>
-            <Field id="birthDate" name="birthDate" placeholder="00 .00 . 00" />
+            <Field id="birthDate" name="birthDate" placeholder="00 . 00 . 00" />
             <ErrorMessage name="birthDate" component="span" className={styles["error-message"]} />
           </div>
           <div className={styles["form-col"]}>
             <label htmlFor="phone">Telefone:</label>
-            <Field id="phone" name="phone" placeholder="00 .00 . 00" />
+            <Field id="phone" name="phone" placeholder="(+00) 00000 0000" />
             <ErrorMessage name="phone" component="span" className={styles["error-message"]} />
           </div>
           <div className={styles["form-col"]}>

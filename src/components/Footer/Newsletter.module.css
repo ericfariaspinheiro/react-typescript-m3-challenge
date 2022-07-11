@@ -8,6 +8,7 @@
   width: max-content;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .newsletter-warpper h3 {
@@ -31,6 +32,7 @@
   padding: 0 16px;
   outline: 0;
   width: 342px;
+  height: 100%;
 }
 
 .form-input::placeholder {
@@ -55,6 +57,12 @@
 
 .form-button:hover {
   background: #24cdfc;
+}
+
+.error-message {
+  position: absolute;
+  color: red;
+  bottom: -18px;
 }
 
 /* Media Queries */

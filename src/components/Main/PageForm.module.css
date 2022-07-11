@@ -31,6 +31,7 @@
   margin-bottom: 13px;
   position: relative;
 }
+
 .form-col label {
   margin-left: 15px;
   font-weight: 400;
@@ -71,9 +72,11 @@
 }
 
 .form-toggle {
+  position: relative;
   display: flex;
+  justify-content: center;
   align-items: center;
-  width: fit-content;
+  width: 200px;
   margin: 22px auto;
   gap: 8px;
 }
@@ -92,10 +95,8 @@
   text-decoration-color: #03bffe;
 }
 
-.form-toggle .error-message {
-  bottom: -255px;
-  margin-left: -10px;
-}
+/* .form-toggle .error-message {
+} */
 
 /* Error Message */
 .error-message {
